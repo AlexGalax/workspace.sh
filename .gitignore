@@ -1,0 +1,6 @@
+*
+!.gitignore
+!readme.md
+!workspace.sh
+!null
+!null/*
