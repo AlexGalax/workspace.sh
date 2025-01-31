@@ -33,7 +33,7 @@ select-window -t 0
 ```bash
 ws start new-project
 ```
-This will execute `new-project/start.sh`, attach the tmux session _new-project_ and, if it's a new session, load its configuration `new-project/tmux.conf`. If you want to force to load the initial configuration on an existing session, run the command with the kill-flag. This will kill the session first:
+This will execute `new-project/ws-start.sh`, attach the tmux session _new-project_ and, if it's a new session, load its configuration `new-project/tmux.conf`. If you want to force to load the initial configuration on an existing session, run the command with the kill-flag. This will kill the session first:
 
 ```bash
 ws start new-project -k
@@ -43,7 +43,7 @@ ws start new-project -k
 ```bash
 ws end
 ```
-This will execute `new-project/end.sh` and detach the tmux session _new-project_. If you want to kill the session, provide the kill-flag:
+This will execute `new-project/ws-end.sh` and detach the tmux session _new-project_. If you want to kill the session, provide the kill-flag:
 
 ```bash
 ws end -k
@@ -57,8 +57,8 @@ ws end another-project [-k]
 
 ### Execute any command script
 
-As seen in starting & ending workspace, any command will execute a script: `project-dir/<command>.sh`.
-This way you can shortcut a sequence of commands, regardless your current location. E.g. check and edit the example `new-project/commit.sh`:
+As seen in starting & ending workspace, any command will execute a script: `project-dir/ws-<command>.sh`.
+This way you can shortcut a sequence of commands, regardless your current location. E.g. check and edit the example `new-project/ws-commit.sh`:
 ```bash
 cd "${BASH_SOURCE%/*}/src"
 git add .
