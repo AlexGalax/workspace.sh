@@ -1,6 +1,28 @@
-*
-!.gitignore
-!readme.md
-!workspace.sh
-!null
-!null/*
+/.idea
+/vendor/
+
+###> shopware/core ###
+.env.local
+.env.local.php
+.env.*.local
+/public/bundles/*
+/public/media/*
+/public/theme/*
+/public/thumbnail/*
+/public/sitemap/*
+/files/*
+!/files/.htaccess
+/var/*
+!/var/.htaccess
+/auth.json
+/install.lock
+public/asset-manifest.json
+files/asset-manifest.json
+###< shopware/core ###
+
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###

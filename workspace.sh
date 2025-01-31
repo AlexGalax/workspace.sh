@@ -10,7 +10,7 @@ shift
 # Execute action script in project directory
 #
 executeActionScript(){
-  script_file="${BASH_SOURCE%/*}/$session_name/$action.sh"
+  script_file="${BASH_SOURCE%/*}/$session_name/ws-$action.sh"
   if [[ -f "$script_file" ]]; then
     colEcho yellow "Executing $script_file…"
     ${script_file}
